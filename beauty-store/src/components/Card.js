@@ -12,9 +12,9 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 const width = Dimensions.get('screen').width / 2 - 30;
 
-function Card({ item }) {
+function Card({ item, navigation }) {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate('Details', item)}>
       <View style={styles.card}>
         <View style={{ alignItems: 'flex-end' }}>
           <View

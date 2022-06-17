@@ -8,7 +8,7 @@ import CategoryList from '../../components/Categories';
 import Items from '../../vars/items';
 import Card from '../../components/Card';
 
-function HomeScreen() {
+function HomeScreen({ navigation }) {
   return (
     <SafeAreaView
       style={{ flex: 1, paddingHorizontal: 20, backgroundColor: Colors.white }}
@@ -40,7 +40,7 @@ function HomeScreen() {
         showsVerticalScrollIndicator={false}
         data={Items}
         columnWrapperStyle={{ justifyContent: 'space-between' }}
-        renderItem={({ item }) => <Card item={item} />}
+        renderItem={({ item }) => <Card item={item} navigation={navigation} />}
         contentContainerStyle={{
           marginTop: 10,
           paddingBottom: 40,
